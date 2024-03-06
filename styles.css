@@ -1,0 +1,182 @@
+/* Импортируем шрифт Dancing Script с Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+/* Используем классы Bootstrap для кнопок */
+.btn {
+  font-family: 'Dancing Script', cursive;
+  font-size: 60px;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  border-radius: 50%;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s, opacity 0.3s;
+}
+
+.btn-primary {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Используем классы Bootstrap для контейнера */
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Используем классы Bootstrap для адаптивности */
+@media (min-width: 600px) and (max-width: 700px) and (orientation: landscape) {
+  .btn {
+    font-size: 20px;
+    width: calc(50% - 20px);
+    height: 120px;
+    margin: 5px;
+  }
+}
+
+/* Остальной CSS код */
+#L.clicked {
+  background-color: #fff; /* Белый фон */
+  color: #d52b1e; /* Цвет полосы флага России */
+}
+#U.clicked {
+  background-color: #f00; /* Красный цвет для верхней половины флага Сингапура */
+  color: #fff; /* Белый цвет текста для контраста */
+}
+body {
+  background-repeat: no-repeat; /* Чтобы изображение не повторялось */
+  background-position: center; /* Чтобы изображение было центрировано */
+  background-size: cover;
+}
+body, html {
+  overflow: scroll;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #f5f5dc; /* Бежевый фон */
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container {
+  background-size: cover; /* Растягиваем изображение на всю доступную область */
+  background-position: center; /* Центрируем изображение по центру экрана */
+}
+
+#nameButtons {
+  display: flex;
+  flex-direction: row; /* Устанавливаем горизонтальное расположение элементов */
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.button {
+  font-family: 'Dancing Script', cursive;
+  font-size: 60px;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s, opacity 0.3s;
+}
+
+.button.clicked {
+  background-color: #000;
+  color: #fff;
+}
+
+.button:hover {
+  background-color: #000;
+  color: #fff;
+  opacity: 0.7;
+}
+
+#L {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Имитация буквы "L" */
+}
+
+#U {
+  clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 50% 100%, 0% 50%, 0% 0%); /* Имитация буквы "U" */
+}
+
+#C {
+  clip-path: ellipse(50% 50% at 50% 50%); /* Имитация буквы "C" */
+}
+
+#I {
+  clip-path: polygon(50% 0%, 75% 0%, 75% 100%, 50% 100%, 25% 100%, 25% 0%); /* Имитация буквы "I" */
+}
+
+#N {
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5); /* Добавляем тень, чтобы улучшить видимость буквы "N" */
+}
+
+#D {
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%); /* Имитация буквы "D" */
+}
+
+#E {
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5); /* Добавляем тень, чтобы улучшить видимость буквы "E" */
+}
+
+.button.clicked {
+  background-color: #000; /* Изменение фона при нажатии */
+  color: #fff; /* Изменение цвета текста при нажатии */
+}
+
+.button:hover {
+  background-color: #000; /* Изменение фона при наведении */
+  color: #fff; /* Изменение цвета текста при наведении */
+  opacity: 0.7; /* Уменьшение прозрачности при наведении */
+}
+
+#adjectivesContainer {
+  position: fixed;
+  bottom: 10px; /* Поднимаем от низа экрана на 100px */
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  word-spacing: 50px;
+  font-family: 'Courier New', Courier, monospace; /* Устанавливаем интересный стиль шрифта */
+  font-size: 80px; /* Увеличиваем размер шрифта в 5 раз */
+   /* Увеличиваем время анимации в четыре раза */
+}
+
+#adjectives span {
+  display: inline; /* Отображение каждого слова отдельно */
+  margin-right: 10px; /* Отступ между словами */
+}
+
+#adjectives span::before {
+  content: '\00a0'; /* Добавляем пробел между словами */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  50%, 100% {
+    transform: translateX(-100%);
+  }
+}
