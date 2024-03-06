@@ -4,9 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
   var adjectivesContainer = document.getElementById('adjectives');
   var pianoSound = document.getElementById('pianoSound');
   var container = document.getElementById('container');
+  var timeoutId;
 
   buttons.forEach(function(button) {
     button.addEventListener('click', function() {
+       clearTimeout(timeoutId);
       var letter = button.textContent;
       var adjectives = getAdjectives(letter);
       
@@ -55,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       // Устанавливаем таймер для возвращения исходного фона через 1 секунду
-      setTimeout(function() {
+      timeoutId = setTimeout(function() {
         document.body.style.backgroundImage = 'none';
       }, 1100);
     });
