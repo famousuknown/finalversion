@@ -161,6 +161,7 @@ body, html {
   font-family: 'Courier New', Courier, monospace; /* Устанавливаем интересный стиль шрифта */
   font-size: 80px; /* Увеличиваем размер шрифта в 5 раз */
    /* Увеличиваем время анимации в четыре раза */
+  animation: marquee 18s steps(5) infinite; /* Изменяем анимацию */
 }
 
 #adjectives span {
