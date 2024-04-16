@@ -172,7 +172,7 @@ body, html {
   position: fixed;
   top: 10px; /* Располагаем сверху на 10px */
   left: 0;
-  width: 100%;
+  width: 80%;
   text-align: center; /* Центрируем текст по горизонтали */
   font-family: 'Dancing Script', cursive; /* Используем элегантный шрифт */
   font-size: 40px; /* Устанавливаем размер шрифта */
