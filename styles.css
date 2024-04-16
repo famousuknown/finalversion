@@ -161,13 +161,41 @@ body, html {
   font-family: 'Courier New', Courier, monospace; /* Устанавливаем интересный стиль шрифта */
   font-size: 80px; /* Увеличиваем размер шрифта в 5 раз */
    /* Увеличиваем время анимации в четыре раза */
-  animation: marquee 18s steps(5) infinite; /* Изменяем анимацию */
 }
 
 #adjectives span {
   display: inline; /* Отображение каждого слова отдельно */
   margin-right: 10px; /* Отступ между словами */
 }
+
+#forgivenessBanner {
+  position: fixed;
+  top: 10px; /* Располагаем сверху на 10px */
+  left: 0;
+  width: 100%;
+  text-align: center; /* Центрируем текст по горизонтали */
+  font-family: 'Dancing Script', cursive; /* Используем элегантный шрифт */
+  font-size: 40px; /* Устанавливаем размер шрифта */
+  color: #ff7f00; /* Белый цвет текста */
+  animation: marquee 20s linear infinite; /* Запускаем анимацию бегущей строки */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  5% {
+    transform: translateX(100%);
+  }
+  95% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
 
 #adjectives span::before {
   content: '\00a0'; /* Добавляем пробел между словами */
@@ -179,13 +207,5 @@ body, html {
   }
   50%, 100% {
     transform: translateX(-100%);
-  }
-}
-@media (max-width: 600px) {
-  .button {
-    margin: 5px; /* Уменьшаем значение margin для кнопок на мобильных устройствах */
-    font-size: 40px; /* Уменьшаем размер шрифта для кнопок на мобильных устройствах */
-    width: 100px; /* Уменьшаем ширину кнопок на мобильных устройствах */
-    height: 100px; /* Уменьшаем высоту кнопок на мобильных устройствах */
   }
 }
